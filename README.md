@@ -6,9 +6,15 @@
 
 
 # Built With
-* MERN Stack
+* HTML
+* Tailwind CSS
+* JavaScript
+* React
+* NodeJS
+* ExpressJS
+* MongoDB
 
-* 
+
 # Pages
 * Home Page
 * Create Page
