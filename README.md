@@ -4,8 +4,8 @@
 
 ## How To Run (Execute In Localhost)
 
-* Run Backend : cd Backend ->npm run dev
-* Run Frontend : cd Frontend ->npm run dev
+* Run Backend : cd ./Backend ->npm run dev
+* Run Frontend : cd ./Frontend ->npm run dev
 
 ## Deplot Link : https://
 
