@@ -14,6 +14,7 @@ const CreateBlog = () => {
     };
 
     //below code is to send the data to the  backend server
+    // const response = await fetch("http://localhost:5000/post-blog", {
     const response = await fetch("http://localhost:5000/post-blog", {
       method: "POST",
       headers: {

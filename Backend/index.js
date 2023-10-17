@@ -1,10 +1,11 @@
-
+// const dotenv = require('dotenv')
+// dotenv.config()
 const express =  require("express")
 const cors = require("cors")
 const {connectDb} = require("./connection")
 const BlogPost = require("./models/BlogPost")
 const app = express()
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 //connect database 
 connectDb()
@@ -15,6 +16,9 @@ app.use(cors())
 
 //routes
 //ROUTE 1: POST the blog
+app.get("/" ,(req,res)=>{
+    res.send("<h1>Hello</h1>")
+})
 app.post("/post-blog", async(req,res)=>{
     let blog = new BlogPost({
         title: req.body.title,
@@ -64,8 +68,6 @@ app.put("/update-blog/:id", async(req,res)=>{
     await blog.save()
     res.status(200).json({message:"Blog Updated successfully",blog})
 })
-
-
 
 //listen server
 app.listen(port,()=>{

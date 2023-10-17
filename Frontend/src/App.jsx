@@ -1,6 +1,6 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import Home from "./pages/Home"
-import CreateBlog from "./pages/CreateBlog"
+import Home from "./routes/Home"
+import CreateBlog from "./routes/CreateBlog"
 import Navbar from './components/Navbar'
 
 export default function App() {

@@ -15,12 +15,14 @@ const Home = () => {
   }, [posts]);
 
   const getPosts = async () => {
+    // const response = await fetch("http://localhost:5000/get-blogs");
     const response = await fetch("http://localhost:5000/get-blogs");
     const data = await response.json();
     setPosts(data.blogs);
   };
 
   const deletePost = async (id) => {
+    // const response = await fetch(`http://localhost:5000/delete-blog/${id}`, {
     const response = await fetch(`http://localhost:5000/delete-blog/${id}`, {
       method: "DELETE",
     });
@@ -33,6 +35,7 @@ const Home = () => {
 
   const updatePost = async (id) => {
     console.log(title, description, id);
+    // const response = await fetch(`http://localhost:5000/update-blog/${id}`, {
     const response = await fetch(`http://localhost:5000/update-blog/${id}`, {
       method: "PUT",
       headers: {
