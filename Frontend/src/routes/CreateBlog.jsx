@@ -14,8 +14,9 @@ const CreateBlog = () => {
     };
 
     //below code is to send the data to the  backend server
+    
     // const response = await fetch("http://localhost:5000/post-blog", {
-    const response = await fetch("http://localhost:5000/post-blog", {
+    const response = await fetch("https://blogappp-ynh8.onrender.com/post-blog", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

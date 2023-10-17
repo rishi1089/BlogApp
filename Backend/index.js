@@ -16,9 +16,9 @@ app.use(cors())
 
 //routes
 //ROUTE 1: POST the blog
-app.get("/" ,(req,res)=>{
-    res.send("<h1>Hello</h1>")
-})
+// app.get("/" ,(req,res)=>{
+//     res.send("<h1>Hello</h1>")
+// })
 app.post("/post-blog", async(req,res)=>{
     let blog = new BlogPost({
         title: req.body.title,

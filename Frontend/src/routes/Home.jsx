@@ -16,14 +16,14 @@ const Home = () => {
 
   const getPosts = async () => {
     // const response = await fetch("http://localhost:5000/get-blogs");
-    const response = await fetch("http://localhost:5000/get-blogs");
+    const response = await fetch("https://blogappp-ynh8.onrender.com/get-blogs");
     const data = await response.json();
     setPosts(data.blogs);
   };
 
   const deletePost = async (id) => {
     // const response = await fetch(`http://localhost:5000/delete-blog/${id}`, {
-    const response = await fetch(`http://localhost:5000/delete-blog/${id}`, {
+    const response = await fetch(`https://blogappp-ynh8.onrender.com/delete-blog/${id}`, {
       method: "DELETE",
     });
     if (response.status === 200) {
@@ -36,7 +36,7 @@ const Home = () => {
   const updatePost = async (id) => {
     console.log(title, description, id);
     // const response = await fetch(`http://localhost:5000/update-blog/${id}`, {
-    const response = await fetch(`http://localhost:5000/update-blog/${id}`, {
+    const response = await fetch(`https://blogappp-ynh8.onrender.com/update-blog/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
